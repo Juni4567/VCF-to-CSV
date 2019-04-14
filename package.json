@@ -1,0 +1,38 @@
+{
+  "name": "vcf-to-csv",
+  "version": "0.0.1",
+  "description": "This Utility software converts VCF files into an Excel sheet.",
+  "homepage": "https://gamier.co.uk",
+  "Author": {
+    "name": "Junaid Anwar",
+    "email": "junaid4567@gmail.com"
+  },
+  "license": "MIT",
+  "scripts": {
+    "start": "node_modules/.bin/babel-node index.js",
+    "build": "node_modules/.bin/babel index.js -d bin/",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "fileAssociations": {
+    "icon": "src"
+  },
+  "dependencies": {
+    "jsonexport": "^2.4.1",
+    "proton-native": "latest",
+    "vcard-json": "^0.5.2"
+  },
+  "devDependencies": {
+    "electron-builder": "latest",
+    "babel-cli": "latest",
+    "babel-preset-env": "latest",
+    "babel-preset-stage-0": "latest",
+    "babel-preset-react": "latest"
+  },
+  "build": {
+    "protonNodeVersion": "current",
+    "mac": {
+      "identity": null
+    }
+  }
+}
